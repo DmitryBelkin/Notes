@@ -1,0 +1,16 @@
+//
+//  Debug.xcconfig
+//  Notes
+//
+//  Created by Dmitry Belkin on 06/07/2019.
+//  Copyright © 2019 parameter. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-Notes/Pods-Notes.debug.xcconfig"
+//#include "Pods/Target Support Files/CocoaLumberjack/CocoaLumberjack.xcconfig"
+
+CONFIG_APP_NAME = Notes Debug
+CONFIG_APP_VERSION = 0.1
