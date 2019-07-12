@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoteEditView">
+            <connections>
+                <outlet property="colorPickerView" destination="95V-28-SQx" id="aMf-zE-BKQ"/>
+                <outlet property="destroyDatePicker" destination="u8r-Mw-d4H" id="pm8-hz-MFb"/>
+                <outlet property="destroyDateSwitch" destination="ur5-Py-doe" id="5Ic-BG-QgI"/>
+                <outlet property="greenColorView" destination="GfH-Qq-yG8" id="yg9-Qp-qml"/>
+                <outlet property="noteContentTextView" destination="CcY-Vu-MWC" id="2k6-wQ-vTu"/>
+                <outlet property="noteEditView" destination="6QC-Xo-tKz" id="1M1-9A-YVf"/>
+                <outlet property="noteTitleTextField" destination="Cef-G1-f8e" id="Rdj-jK-05z"/>
+                <outlet property="paletteColorView" destination="6ZQ-1M-Xyl" id="WIu-zM-s8E"/>
+                <outlet property="redColorView" destination="BkO-d0-hAi" id="QdP-dV-7Iv"/>
+                <outlet property="whiteColorView" destination="esq-hb-eAD" id="3ld-mt-Er5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABD-io-lPh">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6QC-Xo-tKz">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="841.5"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter title of the note..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cef-G1-f8e">
+                                    <rect key="frame" x="8" y="50" width="398" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <connections>
+                                        <action selector="titleReturnButtonTapped:" destination="-1" eventType="primaryActionTriggered" id="ITU-uJ-Fgi"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use destroy Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-wz-1lA">
+                                    <rect key="frame" x="8" y="158.5" width="137" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ur5-Py-doe">
+                                    <rect key="frame" x="155" y="153" width="51" height="31"/>
+                                    <connections>
+                                        <action selector="switchChanged:" destination="-1" eventType="valueChanged" id="EDd-S7-eZm"/>
+                                    </connections>
+                                </switch>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CcY-Vu-MWC">
+                                    <rect key="frame" x="8" y="100" width="398" height="33"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="u8r-Mw-d4H">
+                                    <rect key="frame" x="8" y="192" width="414" height="216"/>
+                                    <date key="date" timeIntervalSinceReferenceDate="584697075.31977403">
+                                        <!--2019-07-13 07:51:15 +0000-->
+                                    </date>
+                                </datePicker>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f9e-MY-pMJ">
+                                    <rect key="frame" x="8" y="458" width="398" height="93.5"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esq-hb-eAD" customClass="ColorView" customModule="Notes" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="93.5" height="93.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="esq-hb-eAD" secondAttribute="height" multiplier="1:1" id="f5K-nz-DKy"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shapeColor">
+                                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="Ozw-7c-E2z" appends="YES" id="dx6-Wt-f2K"/>
+                                            </connections>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BkO-d0-hAi" customClass="ColorView" customModule="Notes" customModuleProvider="target">
+                                            <rect key="frame" x="101.5" y="0.0" width="93.5" height="93.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="BkO-d0-hAi" secondAttribute="height" multiplier="1:1" id="D71-gD-9Jw"/>
+                                            </constraints>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="QKa-1z-sQW" appends="YES" id="9id-hd-fCd"/>
+                                            </connections>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GfH-Qq-yG8" customClass="ColorView" customModule="Notes" customModuleProvider="target">
+                                            <rect key="frame" x="203" y="0.0" width="93.5" height="93.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="GfH-Qq-yG8" secondAttribute="height" multiplier="1:1" id="BBV-wk-3IU"/>
+                                            </constraints>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="agK-cQ-Xl9" appends="YES" id="QsF-Xc-V13"/>
+                                            </connections>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ZQ-1M-Xyl" customClass="PaletteColorView" customModule="Notes" customModuleProvider="target">
+                                            <rect key="frame" x="304.5" y="0.0" width="93.5" height="93.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="6ZQ-1M-Xyl" secondAttribute="height" multiplier="1:1" id="4Bs-89-yU9"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shapeColor">
+                                                    <color key="value" red="0.33333333329999998" green="0.12549019610000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="fGY-Rj-cTG" appends="YES" id="5EY-9u-FNQ"/>
+                                            </connections>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GfH-Qq-yG8" firstAttribute="height" secondItem="6ZQ-1M-Xyl" secondAttribute="height" id="bSC-KV-0YN"/>
+                                        <constraint firstItem="BkO-d0-hAi" firstAttribute="height" secondItem="GfH-Qq-yG8" secondAttribute="height" id="spv-Vs-gS2"/>
+                                        <constraint firstItem="esq-hb-eAD" firstAttribute="height" secondItem="BkO-d0-hAi" secondAttribute="height" id="vFG-cm-0cN"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="u8r-Mw-d4H" firstAttribute="top" secondItem="ur5-Py-doe" secondAttribute="bottom" constant="8" id="2qV-RG-Qlp"/>
+                                <constraint firstAttribute="trailing" secondItem="f9e-MY-pMJ" secondAttribute="trailing" constant="8" id="B2P-HY-TY2"/>
+                                <constraint firstItem="Cef-G1-f8e" firstAttribute="leading" secondItem="6QC-Xo-tKz" secondAttribute="leading" constant="8" id="BJG-qT-GsN"/>
+                                <constraint firstItem="NI3-wz-1lA" firstAttribute="leading" secondItem="6QC-Xo-tKz" secondAttribute="leading" constant="8" id="Cos-6N-tiQ"/>
+                                <constraint firstAttribute="bottom" secondItem="f9e-MY-pMJ" secondAttribute="bottom" constant="290" id="KBw-VR-ks0"/>
+                                <constraint firstItem="Cef-G1-f8e" firstAttribute="top" secondItem="6QC-Xo-tKz" secondAttribute="top" constant="50" id="Mbf-cV-FoA"/>
+                                <constraint firstItem="ur5-Py-doe" firstAttribute="top" secondItem="CcY-Vu-MWC" secondAttribute="bottom" constant="20" id="Mr4-n3-xRy"/>
+                                <constraint firstAttribute="trailing" secondItem="CcY-Vu-MWC" secondAttribute="trailing" constant="8" id="VVQ-VB-BtY"/>
+                                <constraint firstItem="u8r-Mw-d4H" firstAttribute="leading" secondItem="6QC-Xo-tKz" secondAttribute="leading" constant="8" id="XPE-2f-IdZ"/>
+                                <constraint firstItem="f9e-MY-pMJ" firstAttribute="leading" secondItem="6QC-Xo-tKz" secondAttribute="leading" constant="8" id="ZC6-Ue-fs3"/>
+                                <constraint firstItem="NI3-wz-1lA" firstAttribute="centerY" secondItem="ur5-Py-doe" secondAttribute="centerY" id="dLD-7l-09B"/>
+                                <constraint firstAttribute="trailing" secondItem="Cef-G1-f8e" secondAttribute="trailing" constant="8" id="fda-Gh-ztu"/>
+                                <constraint firstItem="f9e-MY-pMJ" firstAttribute="top" secondItem="u8r-Mw-d4H" secondAttribute="bottom" constant="50" id="h7F-KN-laD"/>
+                                <constraint firstAttribute="trailing" secondItem="u8r-Mw-d4H" secondAttribute="trailing" constant="-8" id="p0J-KF-yO4"/>
+                                <constraint firstItem="ur5-Py-doe" firstAttribute="leading" secondItem="NI3-wz-1lA" secondAttribute="trailing" constant="10" id="q6U-bg-QNA"/>
+                                <constraint firstItem="CcY-Vu-MWC" firstAttribute="leading" secondItem="6QC-Xo-tKz" secondAttribute="leading" constant="8" id="vXq-fL-b9z"/>
+                                <constraint firstItem="CcY-Vu-MWC" firstAttribute="top" secondItem="Cef-G1-f8e" secondAttribute="bottom" constant="20" id="yXt-R4-Wo6"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="6QC-Xo-tKz" firstAttribute="top" secondItem="ABD-io-lPh" secondAttribute="top" id="2kx-Cc-ej0"/>
+                        <constraint firstItem="6QC-Xo-tKz" firstAttribute="leading" secondItem="ABD-io-lPh" secondAttribute="leading" id="A3y-Kb-BdV"/>
+                        <constraint firstAttribute="trailing" secondItem="6QC-Xo-tKz" secondAttribute="trailing" id="Mu6-bZ-SFQ"/>
+                        <constraint firstAttribute="bottom" secondItem="6QC-Xo-tKz" secondAttribute="bottom" id="hcT-6Q-JvM"/>
+                    </constraints>
+                </scrollView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95V-28-SQx" customClass="ColorPickerView" customModule="Notes" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="39" width="414" height="818"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="95V-28-SQx" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" id="3BN-ax-ZsZ"/>
+                <constraint firstItem="ABD-io-lPh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4qg-b2-TSS"/>
+                <constraint firstItem="6QC-Xo-tKz" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" priority="250" id="OrZ-Ee-JVe"/>
+                <constraint firstItem="ABD-io-lPh" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Q3y-iC-u1M"/>
+                <constraint firstItem="6QC-Xo-tKz" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" id="aXn-7x-h7O"/>
+                <constraint firstItem="95V-28-SQx" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" id="ds7-qi-nLG"/>
+                <constraint firstItem="ABD-io-lPh" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="kO0-kw-Qgz"/>
+                <constraint firstItem="95V-28-SQx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qRM-3a-xbt"/>
+                <constraint firstItem="95V-28-SQx" firstAttribute="centerX" secondItem="ABD-io-lPh" secondAttribute="centerX" id="rFn-dF-u7x"/>
+                <constraint firstItem="ABD-io-lPh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="sUq-k5-Zar"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="88.392857142857139"/>
+        </view>
+        <tapGestureRecognizer id="Ozw-7c-E2z">
+            <connections>
+                <action selector="whiteColorTapped:" destination="-1" id="b1p-ae-DA8"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="QKa-1z-sQW">
+            <connections>
+                <action selector="redColorTapped:" destination="-1" id="Byp-W6-6fx"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="agK-cQ-Xl9">
+            <connections>
+                <action selector="greenColorTapped:" destination="-1" id="8vF-et-UZm"/>
+            </connections>
+        </tapGestureRecognizer>
+        <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="fGY-Rj-cTG">
+            <connections>
+                <action selector="paletteColorViewLongPress:" destination="-1" id="Au3-YI-nP3"/>
+            </connections>
+        </pongPressGestureRecognizer>
+    </objects>
+</document>

@@ -90,17 +90,15 @@ extension UIColor {
             return nil
         }
 
-        let r = Int( color               >> 24)
-        let g = Int((color & 0x00FFFFFF) >> 16)
-        let b = Int((color & 0x0000FFFF) >> 8 )
-        let a = Int((color & 0x000000FF)      )
+        let r = Int( color             >> 16)
+        let g = Int((color & 0x00FFFF) >> 8 )
+        let b = Int((color & 0x0000FF) >> 0 )
 
         let red   = CGFloat(r) / 255.0
         let green = CGFloat(g) / 255.0
         let blue  = CGFloat(b) / 255.0
-        let alpha = CGFloat(a) / 255.0
 
-        self.init(red: red, green: green, blue: blue, alpha: alpha)
+        self.init(red: red, green: green, blue: blue, alpha: 1)
     }
 
     func toHexString() -> String {
@@ -109,8 +107,8 @@ extension UIColor {
         var b: CGFloat = 0
         var a: CGFloat = 0
         getRed(&r, green: &g, blue: &b, alpha: &a)
-        let rgba: Int = (Int)(r * 255) << 24 | (Int)(g * 255) << 16 | (Int)(b * 255) << 8 | (Int)(a * 255)
-        return String(format:"#%08x", rgba)
+        let rgba: Int = (Int)(r * 255) << 16 | (Int)(g * 255) << 8 | (Int)(b * 255)
+        return String(format:"#%06x", rgba)
     }
 
     func isWhite() -> Bool {
