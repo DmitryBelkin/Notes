@@ -32,7 +32,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6QC-Xo-tKz">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="610"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter title of the note..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cef-G1-f8e">
                                     <rect key="frame" x="8" y="50" width="398" height="30"/>
@@ -41,31 +41,31 @@
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use destroy Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-wz-1lA">
-                                    <rect key="frame" x="8" y="158.5" width="137" height="20.5"/>
+                                    <rect key="frame" x="8" y="178.5" width="137" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ur5-Py-doe">
-                                    <rect key="frame" x="155" y="153" width="51" height="31"/>
+                                    <rect key="frame" x="155" y="173" width="51" height="31"/>
                                     <connections>
                                         <action selector="switchChanged:" destination="-1" eventType="valueChanged" id="EDd-S7-eZm"/>
                                     </connections>
                                 </switch>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CcY-Vu-MWC">
-                                    <rect key="frame" x="8" y="100" width="398" height="33"/>
+                                    <rect key="frame" x="8" y="120" width="398" height="33"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="u8r-Mw-d4H">
-                                    <rect key="frame" x="8" y="192" width="414" height="216"/>
+                                    <rect key="frame" x="8" y="212" width="414" height="216"/>
                                     <date key="date" timeIntervalSinceReferenceDate="584697075.31977403">
                                         <!--2019-07-13 07:51:15 +0000-->
                                     </date>
                                 </datePicker>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f9e-MY-pMJ">
-                                    <rect key="frame" x="8" y="458" width="398" height="70"/>
+                                    <rect key="frame" x="8" y="528" width="398" height="70"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esq-hb-eAD" customClass="ColorView" customModule="Notes" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="93.5" height="70"/>
@@ -154,17 +154,18 @@
                                 <constraint firstAttribute="trailing" secondItem="CcY-Vu-MWC" secondAttribute="trailing" constant="8" id="VVQ-VB-BtY"/>
                                 <constraint firstItem="u8r-Mw-d4H" firstAttribute="leading" secondItem="6QC-Xo-tKz" secondAttribute="leading" constant="8" id="XPE-2f-IdZ"/>
                                 <constraint firstItem="f9e-MY-pMJ" firstAttribute="leading" secondItem="6QC-Xo-tKz" secondAttribute="leading" constant="8" id="ZC6-Ue-fs3"/>
+                                <constraint firstAttribute="bottom" secondItem="f9e-MY-pMJ" secondAttribute="bottom" constant="12" id="cPe-uv-RWq"/>
                                 <constraint firstItem="NI3-wz-1lA" firstAttribute="centerY" secondItem="ur5-Py-doe" secondAttribute="centerY" id="dLD-7l-09B"/>
                                 <constraint firstAttribute="trailing" secondItem="Cef-G1-f8e" secondAttribute="trailing" constant="8" id="fda-Gh-ztu"/>
-                                <constraint firstItem="f9e-MY-pMJ" firstAttribute="top" secondItem="u8r-Mw-d4H" secondAttribute="bottom" constant="50" id="h7F-KN-laD"/>
+                                <constraint firstItem="f9e-MY-pMJ" firstAttribute="top" secondItem="u8r-Mw-d4H" secondAttribute="bottom" constant="100" id="h7F-KN-laD"/>
                                 <constraint firstAttribute="trailing" secondItem="u8r-Mw-d4H" secondAttribute="trailing" constant="-8" id="p0J-KF-yO4"/>
                                 <constraint firstItem="ur5-Py-doe" firstAttribute="leading" secondItem="NI3-wz-1lA" secondAttribute="trailing" constant="10" id="q6U-bg-QNA"/>
                                 <constraint firstItem="CcY-Vu-MWC" firstAttribute="leading" secondItem="6QC-Xo-tKz" secondAttribute="leading" constant="8" id="vXq-fL-b9z"/>
-                                <constraint firstItem="CcY-Vu-MWC" firstAttribute="top" secondItem="Cef-G1-f8e" secondAttribute="bottom" constant="20" id="yXt-R4-Wo6"/>
+                                <constraint firstItem="CcY-Vu-MWC" firstAttribute="top" secondItem="Cef-G1-f8e" secondAttribute="bottom" constant="40" id="yXt-R4-Wo6"/>
                             </constraints>
                         </view>
-                        <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95V-28-SQx" customClass="ColorPickerView" customModule="Notes" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="406" height="818"/>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95V-28-SQx" customClass="ColorPickerView" customModule="Notes" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="610"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
@@ -173,11 +174,9 @@
                         <constraint firstItem="95V-28-SQx" firstAttribute="leading" secondItem="ABD-io-lPh" secondAttribute="leading" id="6y8-wd-sKO"/>
                         <constraint firstItem="6QC-Xo-tKz" firstAttribute="leading" secondItem="ABD-io-lPh" secondAttribute="leading" id="A3y-Kb-BdV"/>
                         <constraint firstAttribute="trailing" secondItem="6QC-Xo-tKz" secondAttribute="trailing" id="Mu6-bZ-SFQ"/>
-                        <constraint firstItem="6QC-Xo-tKz" firstAttribute="centerX" secondItem="ABD-io-lPh" secondAttribute="centerX" id="TwP-Hi-Ywc"/>
                         <constraint firstAttribute="bottom" secondItem="6QC-Xo-tKz" secondAttribute="bottom" id="hcT-6Q-JvM"/>
                         <constraint firstItem="95V-28-SQx" firstAttribute="top" secondItem="ABD-io-lPh" secondAttribute="top" id="ixN-tX-MBb"/>
                         <constraint firstAttribute="trailing" secondItem="95V-28-SQx" secondAttribute="trailing" id="kNq-yD-n8X"/>
-                        <constraint firstItem="6QC-Xo-tKz" firstAttribute="centerY" secondItem="ABD-io-lPh" secondAttribute="centerY" id="nFL-KX-ya1"/>
                         <constraint firstAttribute="bottom" secondItem="95V-28-SQx" secondAttribute="bottom" id="tSQ-kN-FUR"/>
                     </constraints>
                 </scrollView>
