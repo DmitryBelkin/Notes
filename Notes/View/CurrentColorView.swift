@@ -9,6 +9,7 @@
 import UIKit
 
 @IBDesignable
+//recommend to rename to ColorSelectorView
 class CurrentColorView: UIView {
     @IBInspectable var fillColor: UIColor = .white
     @IBInspectable var strokeColor: UIColor = .black
@@ -20,7 +21,9 @@ class CurrentColorView: UIView {
     override var intrinsicContentSize: CGSize {
         return CGSize(width: 80, height: 80)
     }
-
+//why not to use just an image view and create filled image with selected color in the same way?
+//In such case you will delete this file and will have less code which you need to support
+//I never used overriding of draw, only if it is not a requirement
     override func draw(_ rect: CGRect) {
         super.draw(rect)
 

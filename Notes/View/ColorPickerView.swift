@@ -15,6 +15,7 @@ class ColorPickerView: UIView, HSBColorPickerDelegate {
     private var label = UILabel()
     private var button = UIButton()
     private var slider = UISlider()
+    private var layoutedOnce = false
 
     func HSBColorColorPickerTouched(sender: HSBColorPicker, color: UIColor, point: CGPoint, state: UIGestureRecognizer.State) {
         currentColorView.fillColor = color
@@ -46,7 +47,12 @@ class ColorPickerView: UIView, HSBColorPickerDelegate {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-
+        
+        guard !layoutedOnce else {
+            return
+        }
+        layoutedOnce = true
+        
         let currentColorViewSize = currentColorView.intrinsicContentSize
         currentColorView.frame = CGRect(
             origin: CGPoint(
@@ -85,6 +91,8 @@ class ColorPickerView: UIView, HSBColorPickerDelegate {
                 x: 8,
                 y: currentColorView.frame.maxY + 20),
             size: hsbColorPickerSize)
+        //good way to create delegate which will inform outer view about frame changes or data selection
+        //and recomend you to dive into layout subviews method call. For begining just look how many times it is called
     }
 
     private func setupViews() {

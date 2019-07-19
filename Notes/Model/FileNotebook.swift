@@ -48,6 +48,7 @@ class FileNotebook : Notebook {
     }
 
     public func remove(with uid: String) {
+        //TODO: Use filterinf with condition or predicate
         for (i, nextNote) in self.notes.enumerated() {
             if nextNote.uid == uid {
                 self.notes.remove(at: i)
@@ -61,7 +62,10 @@ class FileNotebook : Notebook {
 
         guard let cachesDirectoryUrl = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else { return }
         let targetDirectoryUrl = cachesDirectoryUrl.appendingPathComponent(FileNotebook.notebooksDirectory)
-
+        //TODO: use guard let:
+//        guard !directoryExistsAtPath(targetDirectoryUrl.path), !tryToCreateDirectory(targetDirectoryUrl) else {
+//            return
+//        }
         if !directoryExistsAtPath(targetDirectoryUrl.path) {
             if !tryToCreateDirectory(targetDirectoryUrl) {
                 return

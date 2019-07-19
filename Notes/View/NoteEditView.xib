@@ -164,29 +164,29 @@
                                 <constraint firstItem="CcY-Vu-MWC" firstAttribute="top" secondItem="Cef-G1-f8e" secondAttribute="bottom" constant="40" id="yXt-R4-Wo6"/>
                             </constraints>
                         </view>
-                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95V-28-SQx" customClass="ColorPickerView" customModule="Notes" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="610"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="6QC-Xo-tKz" firstAttribute="top" secondItem="ABD-io-lPh" secondAttribute="top" id="2kx-Cc-ej0"/>
-                        <constraint firstItem="95V-28-SQx" firstAttribute="leading" secondItem="ABD-io-lPh" secondAttribute="leading" id="6y8-wd-sKO"/>
                         <constraint firstItem="6QC-Xo-tKz" firstAttribute="leading" secondItem="ABD-io-lPh" secondAttribute="leading" id="A3y-Kb-BdV"/>
                         <constraint firstAttribute="trailing" secondItem="6QC-Xo-tKz" secondAttribute="trailing" id="Mu6-bZ-SFQ"/>
                         <constraint firstAttribute="bottom" secondItem="6QC-Xo-tKz" secondAttribute="bottom" id="hcT-6Q-JvM"/>
-                        <constraint firstItem="95V-28-SQx" firstAttribute="top" secondItem="ABD-io-lPh" secondAttribute="top" id="ixN-tX-MBb"/>
-                        <constraint firstAttribute="trailing" secondItem="95V-28-SQx" secondAttribute="trailing" id="kNq-yD-n8X"/>
-                        <constraint firstAttribute="bottom" secondItem="95V-28-SQx" secondAttribute="bottom" id="tSQ-kN-FUR"/>
                     </constraints>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95V-28-SQx" customClass="ColorPickerView" customModule="Notes" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="95V-28-SQx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2Mw-jS-kO5"/>
                 <constraint firstItem="ABD-io-lPh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4qg-b2-TSS"/>
+                <constraint firstItem="95V-28-SQx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="6Lg-RB-Yel"/>
                 <constraint firstItem="ABD-io-lPh" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Q3y-iC-u1M"/>
+                <constraint firstItem="95V-28-SQx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hWd-T6-wXT"/>
                 <constraint firstItem="ABD-io-lPh" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="kO0-kw-Qgz"/>
                 <constraint firstItem="ABD-io-lPh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="sUq-k5-Zar"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="95V-28-SQx" secondAttribute="bottom" id="y7G-kQ-Ywi"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
