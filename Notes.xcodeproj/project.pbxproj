@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		6CE3CAA052B773FD7F9C62BB /* libPods-NotesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B295415C05775D128AFF0677 /* libPods-NotesTests.a */; };
+		8653996B22FAFD1A00148F28 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653996A22FAFD1A00148F28 /* AsyncOperation.swift */; };
+		8653996D22FAFD2200148F28 /* LoadNotesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653996C22FAFD2200148F28 /* LoadNotesOperation.swift */; };
+		8653997022FAFD2900148F28 /* RemoveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653996E22FAFD2800148F28 /* RemoveNoteOperation.swift */; };
+		8653997122FAFD2900148F28 /* SaveNoteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653996F22FAFD2800148F28 /* SaveNoteOperation.swift */; };
+		8653997622FAFD3F00148F28 /* LoadNotesBackendOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653997322FAFD3E00148F28 /* LoadNotesBackendOperation.swift */; };
+		8653997722FAFD3F00148F28 /* SaveNotesBackendOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653997422FAFD3E00148F28 /* SaveNotesBackendOperation.swift */; };
+		8653997822FAFD3F00148F28 /* BaseBackendOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653997522FAFD3E00148F28 /* BaseBackendOperation.swift */; };
+		8653997E22FAFD5400148F28 /* SaveNoteDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653997A22FAFD5400148F28 /* SaveNoteDBOperation.swift */; };
+		8653997F22FAFD5400148F28 /* LoadNotesDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653997B22FAFD5400148F28 /* LoadNotesDBOperation.swift */; };
+		8653998022FAFD5400148F28 /* RemoveNoteDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653997C22FAFD5400148F28 /* RemoveNoteDBOperation.swift */; };
+		8653998122FAFD5400148F28 /* BaseDBOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8653997D22FAFD5400148F28 /* BaseDBOperation.swift */; };
 		8660771522D8E7000009569A /* NoteEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8660771422D8E7000009569A /* NoteEditView.xib */; };
 		8683B3EB22DCE691009BD6BF /* PaletteColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8683B3EA22DCE691009BD6BF /* PaletteColorView.swift */; };
 		8697638722EF4FF5008FB711 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697638622EF4FF5008FB711 /* NoteTableViewCell.swift */; };
@@ -50,6 +61,17 @@
 		8604E16E22D03A74004E47F9 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		8604E16F22D03A81004E47F9 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		8604E17022D03A8C004E47F9 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		8653996A22FAFD1A00148F28 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		8653996C22FAFD2200148F28 /* LoadNotesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadNotesOperation.swift; sourceTree = "<group>"; };
+		8653996E22FAFD2800148F28 /* RemoveNoteOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveNoteOperation.swift; sourceTree = "<group>"; };
+		8653996F22FAFD2800148F28 /* SaveNoteOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveNoteOperation.swift; sourceTree = "<group>"; };
+		8653997322FAFD3E00148F28 /* LoadNotesBackendOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadNotesBackendOperation.swift; sourceTree = "<group>"; };
+		8653997422FAFD3E00148F28 /* SaveNotesBackendOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveNotesBackendOperation.swift; sourceTree = "<group>"; };
+		8653997522FAFD3E00148F28 /* BaseBackendOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBackendOperation.swift; sourceTree = "<group>"; };
+		8653997A22FAFD5400148F28 /* SaveNoteDBOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveNoteDBOperation.swift; sourceTree = "<group>"; };
+		8653997B22FAFD5400148F28 /* LoadNotesDBOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadNotesDBOperation.swift; sourceTree = "<group>"; };
+		8653997C22FAFD5400148F28 /* RemoveNoteDBOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveNoteDBOperation.swift; sourceTree = "<group>"; };
+		8653997D22FAFD5400148F28 /* BaseDBOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDBOperation.swift; sourceTree = "<group>"; };
 		8660771422D8E7000009569A /* NoteEditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteEditView.xib; sourceTree = "<group>"; };
 		8683B3EA22DCE691009BD6BF /* PaletteColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteColorView.swift; sourceTree = "<group>"; };
 		8697638622EF4FF5008FB711 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
@@ -133,6 +155,40 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		8653996922FAFD0600148F28 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8653997922FAFD4B00148F28 /* DBOperations */,
+				8653997222FAFD3000148F28 /* BackendOperations */,
+				8653996A22FAFD1A00148F28 /* AsyncOperation.swift */,
+				8653996C22FAFD2200148F28 /* LoadNotesOperation.swift */,
+				8653996E22FAFD2800148F28 /* RemoveNoteOperation.swift */,
+				8653996F22FAFD2800148F28 /* SaveNoteOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		8653997222FAFD3000148F28 /* BackendOperations */ = {
+			isa = PBXGroup;
+			children = (
+				8653997522FAFD3E00148F28 /* BaseBackendOperation.swift */,
+				8653997322FAFD3E00148F28 /* LoadNotesBackendOperation.swift */,
+				8653997422FAFD3E00148F28 /* SaveNotesBackendOperation.swift */,
+			);
+			path = BackendOperations;
+			sourceTree = "<group>";
+		};
+		8653997922FAFD4B00148F28 /* DBOperations */ = {
+			isa = PBXGroup;
+			children = (
+				8653997D22FAFD5400148F28 /* BaseDBOperation.swift */,
+				8653997B22FAFD5400148F28 /* LoadNotesDBOperation.swift */,
+				8653997C22FAFD5400148F28 /* RemoveNoteDBOperation.swift */,
+				8653997A22FAFD5400148F28 /* SaveNoteDBOperation.swift */,
+			);
+			path = DBOperations;
+			sourceTree = "<group>";
+		};
 		86A343A622DC0C38006B3CE3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +255,7 @@
 		86DD7B9922CB11F800C7D15E /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				8653996922FAFD0600148F28 /* Operations */,
 				86DD7BBA22CB120C00C7D15E /* Models */,
 				86A343A622DC0C38006B3CE3 /* Views */,
 				86BE77BE22EC7E29002E705C /* Controllers */,
@@ -382,20 +439,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8653997E22FAFD5400148F28 /* SaveNoteDBOperation.swift in Sources */,
 				8683B3EB22DCE691009BD6BF /* PaletteColorView.swift in Sources */,
 				8697638722EF4FF5008FB711 /* NoteTableViewCell.swift in Sources */,
 				86E6396B22D9F6FA009D63C7 /* ColorPickerView.swift in Sources */,
 				86CC3B0E22DADAFD0030644B /* HSBColorPicker.swift in Sources */,
+				8653998022FAFD5400148F28 /* RemoveNoteDBOperation.swift in Sources */,
+				8653997122FAFD2900148F28 /* SaveNoteOperation.swift in Sources */,
 				86E6396722D9B65E009D63C7 /* NoteEditView.swift in Sources */,
+				8653998122FAFD5400148F28 /* BaseDBOperation.swift in Sources */,
+				8653997F22FAFD5400148F28 /* LoadNotesDBOperation.swift in Sources */,
 				86DD7BC022CB125900C7D15E /* FileNotebook.swift in Sources */,
 				86CC3B1022DAF4EA0030644B /* ColorSelectorView.swift in Sources */,
 				86A7ACF922F54FE700511808 /* DetailViewController.swift in Sources */,
 				86DD7B9D22CB11F800C7D15E /* NoteEditViewController.swift in Sources */,
+				8653997822FAFD3F00148F28 /* BaseBackendOperation.swift in Sources */,
 				86E6396922D9D9C8009D63C7 /* ColorView.swift in Sources */,
 				86F9730A22F4975C00D47854 /* PhotoCollectionViewController.swift in Sources */,
+				8653997022FAFD2900148F28 /* RemoveNoteOperation.swift in Sources */,
 				86DD7BBE22CB124A00C7D15E /* NoteExtension.swift in Sources */,
 				86F9730C22F4A12200D47854 /* PhotoCollectionViewCell.swift in Sources */,
+				8653997722FAFD3F00148F28 /* SaveNotesBackendOperation.swift in Sources */,
+				8653996D22FAFD2200148F28 /* LoadNotesOperation.swift in Sources */,
+				8653996B22FAFD1A00148F28 /* AsyncOperation.swift in Sources */,
 				86DD7B9B22CB11F800C7D15E /* AppDelegate.swift in Sources */,
+				8653997622FAFD3F00148F28 /* LoadNotesBackendOperation.swift in Sources */,
 				86DD7BBC22CB123900C7D15E /* Note.swift in Sources */,
 				86BE77C022EC8426002E705C /* NotebookViewController.swift in Sources */,
 			);
