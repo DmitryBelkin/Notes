@@ -60,9 +60,7 @@ class FileNotebook : Notebook {
         let jsonObjects = self.notes.map( { $0.json } )
 
         guard let cachesDirectoryUrl = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else { return }
-        print("CACHES = \(cachesDirectoryUrl)")
         let targetDirectoryUrl = cachesDirectoryUrl.appendingPathComponent(FileNotebook.notebooksDirectory)
-        print("TARGET = \(targetDirectoryUrl)")
 
         if !directoryExistsAtPath(targetDirectoryUrl.path) {
             if !tryToCreateDirectory(targetDirectoryUrl) {
