@@ -25,6 +25,7 @@ class SaveNoteOperation: AsyncOperation {
                 case .failure:
                     self.result = false
                 }
+                print("SaveNoteOperation \(String(describing: self.result))")
                 self.finish()
             }
             backendQueue.addOperation(saveToBackend)

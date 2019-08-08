@@ -33,7 +33,7 @@ class RemoveNoteOperation: AsyncOperation {
                 case .failure:
                     self.result = false
                 }
-                print("RemoveNoteOperation succeeded")
+                print("RemoveNoteOperation \(String(describing: self.result))")
                 self.finish()
             }
             backendQueue.addOperation(saveToBackend)

@@ -68,7 +68,6 @@ class FileNotebook : Notebook {
             }
         }
 
-        let storeFileUrl = targetDirectoryUrl.appendingPathComponent(storeFileName)
         var data = Data()
         do {
             data = try JSONSerialization.data(withJSONObject: jsonObjects, options: JSONSerialization.WritingOptions.prettyPrinted)
@@ -77,6 +76,7 @@ class FileNotebook : Notebook {
             return
         }
 
+        let storeFileUrl = targetDirectoryUrl.appendingPathComponent(storeFileName)
         if FileManager.default.fileExists(atPath: storeFileUrl.path) {
             do {
                 try FileManager.default.removeItem(atPath: storeFileUrl.path)
@@ -91,6 +91,7 @@ class FileNotebook : Notebook {
             DDLogError("Ошибка создания файла")
             return
         }
+        print("NOTES SAVED IN \(storeFileUrl.path)")
     }
 
     public func loadFromFile() {
@@ -127,6 +128,7 @@ class FileNotebook : Notebook {
                 }
             }
         }
+        print("NOTES LOADED FROM \(loadFileUrl.path)")
     }
 
 }
