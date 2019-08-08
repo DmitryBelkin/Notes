@@ -78,18 +78,7 @@ class NoteEditViewController: UIViewController, UITextViewDelegate {
         } else {
 //            noteEditView.colorPickerView.
         }
-
-//        let notebook = FileNotebook()
-//        let note1 = Note(title: "Note1", content: "Content1", importance: Importance.unimportant)
-//        let note2 = Note(title: "Note2", content: "Content2", importance: Importance.usual)
-//        let note3 = Note(title: "Note3", content: "Content3", importance: Importance.important)
-//
-//        notebook.add(note1!)
-//        notebook.add(note2!)
-//        notebook.add(note3!)
-//
-//        notebook.saveToFile()
-
+        
         // Do any additional setup after loading the view.
     }
 

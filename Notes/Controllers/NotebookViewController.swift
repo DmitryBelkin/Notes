@@ -37,6 +37,10 @@ class NotebookViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = editButtonItem
+
+        backendQueue.maxConcurrentOperationCount = 1
+        dbQueue     .maxConcurrentOperationCount = 1
+        commonQueue .maxConcurrentOperationCount = 1
     }
 
     override func setEditing(_ editing: Bool, animated: Bool) {
@@ -75,9 +79,6 @@ class NotebookViewController: UITableViewController {
             }
             deleteCellOperation.addDependency(removeNoteOperation)
             OperationQueue.main.addOperation(deleteCellOperation)
-
-//            notebook.remove(with: notebook.notes[indexPath.row].uid)
-//            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
 
@@ -90,30 +91,27 @@ class NotebookViewController: UITableViewController {
                     controller.note = notebook.notes[indexPath.row]
                     controller.callback = {
                         editedNote in
-                        ///
-                        let backendQueue = OperationQueue()
-                        let dbQueue = OperationQueue()
-                        let commonQueue = OperationQueue()
+                        if let editedNote = editedNote {
+                            // first delete
+                            let removeNoteOperation = RemoveNoteOperation(
+                                note: self.notebook.notes[indexPath.row],
+                                notebook: self.notebook,
+                                backendQueue: self.backendQueue,
+                                dbQueue: self.dbQueue)
 
-                        let removeNoteOperation = RemoveNoteOperation(
-                            note: self.notebook.notes[indexPath.row],
-                            notebook: self.notebook,
-                            backendQueue: backendQueue,
-                            dbQueue: dbQueue
-                        )
-                        commonQueue.addOperation(removeNoteOperation)
+                            self.commonQueue.addOperation(removeNoteOperation)
 
-                        let updateUI = BlockOperation {
-                            print(self.notebook.notes.count)
+                            // then add
+                            let saveNoteOperation = SaveNoteOperation(
+                                note: editedNote,
+                                notebook: self.notebook,
+                                backendQueue: self.backendQueue,
+                                dbQueue: self.dbQueue
+                            )
+
+                            self.commonQueue.addOperation(saveNoteOperation)
                         }
-                        OperationQueue.main.addOperation(updateUI)
-                        ///
-                        // first delete
-                        self.notebook.remove(with: self.notebook.notes[indexPath.row].uid)
-                        self.tableView.deleteRows(at: [indexPath], with: .fade)
 
-                        // then add
-                        self.notebook.add(editedNote!)
                     }
                     tableView.deselectRow(at: indexPath, animated: true)
                 }
@@ -121,7 +119,14 @@ class NotebookViewController: UITableViewController {
                 controller.callback = {
                     editedNote in
                     if let newNote = editedNote {
-                        self.notebook.add(newNote)
+                        let saveNoteOperation = SaveNoteOperation(
+                            note: newNote,
+                            notebook: self.notebook,
+                            backendQueue: self.backendQueue,
+                            dbQueue: self.dbQueue
+                        )
+
+                        self.commonQueue.addOperation(saveNoteOperation)
                     }
                 }
             }
